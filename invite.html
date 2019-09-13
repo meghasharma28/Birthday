@@ -1,0 +1,269 @@
+<html>
+<head>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url(https://images.pexels.com/photos/157879/gift-jeans-fashion-pack-157879.jpeg?w=640&h=355&auto=compress&cs=tinysrgb);
+  background-repeat: no-repeat;  
+  background-size: cover;
+  font-family: 'Nova Oval', cursive;
+  font-size: 0.9em;
+}
+
+.invite {
+  width: 60%;
+  min-width: 500px;
+  margin: 5% 5%;
+  font-size: 1.5em;
+  color: #EAEAEA;  
+  background: rgba(17,21,31,0.6);
+  padding: 2% 5%;
+}
+
+.greeting {
+  font-size: 3em;
+  color: #00B3BC;
+  text-align: center;
+  font-family: 'Marck Script', cursive;
+}
+
+.eventName {
+  width: 90%;
+  margin: auto;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #A9E5BB;
+}
+
+.date, .time, .location {
+  width: 300px;
+  margin: auto;
+  display: block;
+}
+
+.date:before {
+  content: 'Date: ';
+}
+
+.time:before {
+  content: 'Time: ';
+}
+
+.location:before {
+  content: 'Location: ';
+  display: inline-block;
+}
+
+.locAdd, .locCity {
+  display: inline-block;
+  padding-left: 4.5em;
+}
+
+.rsvp {
+  width: 90%;
+  margin: 30px auto;
+  padding-top: 5%;
+  border-top: 3px solid #ff77bc;
+  text-align: center;
+}
+
+.btn {
+  height: 1.5em;
+  line-height: 1.2em;
+  width: 5em;
+  margin: 5% auto;
+  border: 2px solid #281D1F;
+  cursor: pointer;
+  background: #d7d1e5;
+  color: #281D1F;
+  font-weight: bold;
+}
+
+footer {
+  margin: auto;
+  margin-bottom: 0;
+  background: #d7d1e5;
+}
+
+footer ul {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+footer li{
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
+  color: #281D1F;
+}
+
+.rsvpModal {
+  display: none;
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  height: 230px;
+  width: 400px;
+  background: #4F383C;
+  text-align: center;
+  padding: 3%;
+  padding-bottom: 0;
+  color: #A9E5BB;
+}
+
+.title {
+  color: #00B3BC;
+}
+
+input {
+  margin: 5% auto;
+  width: 80%;
+  padding: 2%;
+}
+
+.going, .notGoing {
+  width: 40%;
+  display: inline-block;
+  margin-bottom: 0;
+  border-radius: 1em;
+  line-height: 1.5em;
+  height: 1.5em;
+  color: #EAEAEA;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.going {
+  background: rgba(33,165,31,0.5);
+}
+
+.notGoing{
+  background: rgba(232,15,15,0.7);
+  margin-left: 1em; 
+}
+
+.aboutModal {
+  display: none;
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  min-height: 400px;
+  width: 400px;
+  background: #4F383C;
+  text-align: center;
+  padding: 3%;
+  padding-bottom: 0;
+  color: #A9E5BB;
+}
+
+.aboutModal p {
+  text-align: left;
+  margin: 5%;
+}
+
+.aboutModal h2 {
+  font-size: 2em;
+  margin: 2% auto; 
+}
+
+.close {
+  width: 1em;
+  text-align: right;
+  font-size: 1.5em;
+  margin-left: 90%;
+  margin-top: -2.5%;
+  cursor: pointer;
+}
+
+.mapModal{
+  display: none;
+  position: absolute;
+  bottom: 25%;
+  left: 8%;
+  height: 350px;
+  width: 500px;
+  background: #4F383C;
+  text-align: center;
+  padding: 3%;
+  padding-bottom: 0;
+  color: #A9E5BB;
+}
+
+.mapModal img {
+  width: 100%;
+  margin: 5% auto;
+}
+.dress
+{
+color: #00B3BC;
+}
+
+</style>
+<body>
+<div class='invite'>
+  <div class='greeting'>Birthday Bash</div>
+  <div class='date'>14 September 2019</div>
+  <div class='time'>7:30 PM</div>
+  <div class='location'>
+    <span class='locName'>The Fern Residency</span>
+    <span class='locAdd'> 1B/A, Police Line, Next To Loco Shed Road, Subhash Chowk, Ratanada,Jodhpur</span>
+    <span class='locCity'>7073803006</span>
+  </div>
+  <div class='rsvp'>
+   <div class='dress'>Preferred Dress Code : Lucknowi Kurta</div>
+    <div class='label'>Let me know you're coming</div>
+    <div class="btn" onclick="document.querySelector('.rsvpModal').style.display='block'">RSVP</div>
+  </div>
+  <footer>
+    <ul>
+     <!--  <li class='about' onclick="document.querySelector('.aboutModal').style.display='block'">Kara's Story</li> -->
+      <li class='map' onclick="document.querySelector('.mapModal').style.display='block'">Get Directions!</li>
+    </ul>
+  </footer>
+</div>
+
+<!-- RSVP Modal -->
+<div class='rsvpModal'>
+  <div class='close' onclick="document.querySelector('.rsvpModal').style.display='none'">X</div>
+  <h1 class="title">CAN YOU COME?</h1>
+  <p>I really hope you can make it.</p>
+  <form>
+    <input type="text" placeholder="Name(s)" name="name">
+  </form>
+  <div class="going" onclick="document.querySelector('.rsvpModal').style.display='none'">Going</button>
+  </div>
+  <div class="notGoing" onclick="document.querySelector('.rsvpModal').style.display='none'">Can't Come</button>
+  </div>
+</div>
+
+<!-- Map Modal -->
+<div class='mapModal'>
+  <div class='close' onclick="document.querySelector('.mapModal').style.display='none'">X</div>
+  <img src="https://i.gyazo.com/ecb5679878d907faa3a7f20de563e1c7.png" alt="Stand-In of Map" />
+</div>
+
+<!-- About Modal -->
+<div class='aboutModal'>
+  <div class='close' onclick="document.querySelector('.aboutModal').style.display='none'">X</div>
+  <h2>Looking Back</h2>
+  <p>Paragraph for bio or story. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+</body>
+</html>
